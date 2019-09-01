@@ -1,0 +1,15 @@
+// Style your site here
+
+@import "css/reveal.scss";
+@import "custom-theme";
+// @import "code-highlighting";
+
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+.reveal {
+  @import "colophon";
+}
