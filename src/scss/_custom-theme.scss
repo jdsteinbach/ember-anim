@@ -11,13 +11,13 @@
 // ---------------------------------------------
 
 // Override theme settings (see ../template/settings.scss)
+$mainColor: #ececec;
+$headingColor: mix(#e04e39, $mainColor, 75%);
+
 $backgroundColor: #131313;
-$backgroundColorAlt: #323232;
+$backgroundColorAlt: rgba($headingColor, .25);
 $shadowColor: #2c3e50;
 $shadowColorAlt: #e04e39;
-
-$mainColor: #ececec;
-$headingColor: #e04e39;
 
 $mainFontSize: 2rem;
 $mainFont: ff-enzo-web, -apple-system, system-ui, BlinkMacSystemFont, Helvetica, sans-serif;
@@ -40,7 +40,7 @@ $fontWeightLight: 600;
 $fontWeightNormal: 700;
 $fontWeightBold: 900;
 
-$blockMargin: $mainFontSize / 1.25;
+$blockMargin: $mainFontSize / 1.5;
 $headingMargin: 0 0 $blockMargin;
 
 $accentColor: mix($headingColor, $mainColor, 45%);
@@ -77,19 +77,19 @@ body {
     margin: 0;
     font-weight: $fontWeightNormal;
     color: $mainColor;
-    text-shadow: 1px 1px 0 $shadowColorAlt,
-                 2px 2px 0 $shadowColorAlt,
-                 3px 3px 0 $shadowColorAlt,
-                 4px 4px 0 $shadowColorAlt;
+    text-shadow: .5px .5px 0 $shadowColorAlt,
+                 1px 1px 0 $shadowColorAlt,
+                 1.5px 1.5px 0 $shadowColorAlt,
+                 2px 2px 0 $shadowColorAlt;
 
     em {
       font-style: normal;
       font-weight: $fontWeightBold;
       color: $headingColor;
-      text-shadow: 1px 1px 0 $shadowColor,
-                   2px 2px 0 $shadowColor,
-                   3px 3px 0 $shadowColor,
-                   4px 4px 0 $shadowColor;
+      text-shadow: .5px .5px 0 $shadowColor,
+                   1px 1px 0 $shadowColor,
+                   1.5px 1.5px 0 $shadowColor,
+                   2px 2px 0 $shadowColor;
 
     }
 
@@ -100,24 +100,24 @@ body {
 
   h1,
   h3 {
-    text-shadow: 1px 1px 0 $shadowColor,
-                 2px 2px 0 $shadowColor,
-                 3px 3px 0 $shadowColor,
-                 4px 4px 0 $shadowColor;
+    text-shadow: .5px .5px 0 $shadowColor,
+                 1px 1px 0 $shadowColor,
+                 1.5px 1.5px 0 $shadowColor,
+                 2px 2px 0 $shadowColor;
 
     em {
       font-style: normal;
       font-weight: $fontWeightBold;
       color: $mainColor;
-      text-shadow: 1px 1px 0 $shadowColorAlt,
-                   2px 2px 0 $shadowColorAlt,
-                   3px 3px 0 $shadowColorAlt,
-                   4px 4px 0 $shadowColorAlt;
+      text-shadow: .5px .5px 0 $shadowColorAlt,
+                   1px 1px 0 $shadowColorAlt,
+                   1.5px 1.5px 0 $shadowColorAlt,
+                   2px 2px 0 $shadowColorAlt;
     }
   }
 
   h3 {
-    font-weight: $fontWeightBold;
+    font-weight: $fontWeightNormal;
 
     &.big {
       font-size: $heading2Size;
@@ -146,6 +146,7 @@ body {
     margin-left: auto;
     margin-right: auto;
     width: 20em;
+    max-width: 100%;
     font-weight: $fontWeightLight;
     text-align: center;
 
@@ -168,6 +169,17 @@ body {
 
   ul {
     margin: 0;
+  }
+
+  blockquote {
+    padding: .5em;
+    background-color: $backgroundColorAlt;
+  }
+
+  blockquote > p {
+    font-size: $heading1Size;
+    text-shadow: .5px .5px 0 $shadowColor,
+                 1px 1px 0 $shadowColor;
   }
 
   .big-p {
@@ -233,6 +245,7 @@ body {
 
   a {
     text-decoration: underline;
+    text-decoration-skip-ink: auto;
   }
 
   table {
@@ -291,6 +304,10 @@ body {
 
   .mb-1 {
     margin-bottom: $blockMargin;
+  }
+
+  .mb-2 {
+    margin-bottom: $blockMargin * 2;
   }
 
   .bg-light {

@@ -13,3 +13,11 @@ initialize({
 
 
 initHighlightingOnLoad()
+
+{
+  const codepenSrc = 'https://production-assets.codepen.io/assets/embed/ei.js'
+  let s = document.createElement('script')
+  s.src = codepenSrc
+  s.setAttribute('async', true)
+  document.body.appendChild(s)
+}

@@ -17,12 +17,14 @@
 
 .colophon__logo {
   width: 15vw;
-  height: auto;
+  height: 5vh;
+  object-fit: contain;
+  object-position: left center;
 }
 
 .colophon__link {
-  opacity: .5;
+  opacity: .75;
   font-family: $codeFont;
   font-style: italic;
-  font-size: (1em / 1.5);
+  font-size: 1em;
 }
