@@ -1,6 +1,6 @@
 ### Make It Smooth
 
-<div class="perf-good" data-emoji="👍">
+<div class="perf-good fragment" data-emoji="👍">
   <div>
     <code>opacity</code>
     <code>transform</code>
