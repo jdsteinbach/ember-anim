@@ -63,6 +63,12 @@ body {
 }
 
 .reveal section {
+  // OVERLAY FIX
+  &[aria-hidden="true"],
+  &[aria-hidden="true"] * {
+    pointer-events: none;
+  }
+
   font-weight: $fontWeightLight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: antialiased;
