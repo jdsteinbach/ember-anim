@@ -6,8 +6,8 @@ initialize({
   progress: true,
   history: true,
   center: true,
-  width: 800,
-  height: 450,
+  width: 1000,
+  height: 550,
   transition: 'fade'
 });
 

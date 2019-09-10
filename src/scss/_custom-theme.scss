@@ -207,7 +207,7 @@ body {
   code {
     font-family: $codeFont;
     color: $codeColor;
-    font-weight: $fontWeightNormal;
+    font-weight: 400;
 
     &::before,
     &::after {
