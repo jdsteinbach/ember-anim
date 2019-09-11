@@ -1,4 +1,4 @@
-## Respect Users
+### Respect Users
 
 ```css
 @media (prefers-reduced-motion: reduce) {

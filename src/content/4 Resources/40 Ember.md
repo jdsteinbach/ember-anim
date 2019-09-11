@@ -3,7 +3,7 @@
 <ul>
 
   <li data-no-fragment>
-    <a rel="noopener" target="_blank" href="">Demo: Animated To-Do List</a>
+    <a rel="noreferrer noopener nofollow" target="_blank" href="https://embercamp.jds.app/">Demo: Animated To-Do List</a>
   </li>
   <li data-no-fragment>
     <a rel="noreferrer noopener nofollow" target="_blank" href="https://ember-animation.github.io/liquid-fire/">Liquid Fire</a>
