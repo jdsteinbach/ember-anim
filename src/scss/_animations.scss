@@ -15,7 +15,7 @@ button[class*="submit-"] {
 }
 
 .submit-hover {
-	$color: $linkColor;
+	$color: $linkColorHover;
 	transform: skew(-12deg);
 	color: $color;
 	background-image: linear-gradient(
