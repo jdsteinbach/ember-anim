@@ -179,3 +179,200 @@ $eases: linear, ease-in, ease-out, ease-in-out;
 		grid-area: emoji;
 	}
 }
+
+.loading {
+  margin: 1em auto;
+  padding: .5em 1em;
+  position: relative;
+  border-radius: .25em;
+  background-color: #fff;
+
+  div {
+    margin: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    justify-content: stretch;
+  }
+
+  label {
+    margin-right: 1em;
+    flex: 0 0 15%;
+    color: $backgroundColor;
+    text-align: left;
+  }
+
+  input {
+    height: 4em;
+    flex: 1 1 100%;
+    border: 2px solid $shadowColorAlt;
+    border-radius: 2px;
+  }
+}
+
+.current-fragment + .loading {
+  > :not([class]) {
+    opacity: 0.33;
+    pointer-events: none;
+  }
+}
+
+.current-fragment + .loading--spin {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($shadowColor, .2);
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    margin-top: -3rem;
+    margin-left: -3rem;
+    width: 6rem;
+    height: 6rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 3rem;
+    border: .5em solid $shadowColor;
+    border-left-color: $linkColor;
+    z-index: 2;
+    animation: loading-spin 2s infinite ease-in-out;
+  }
+}
+
+@keyframes loading-spin {
+  to { transform: rotate(360deg) }
+}
+
+.current-fragment + .loading--slide {
+  &::before {
+    content: "";
+    margin-top: -1rem;
+    margin-left: -7.5rem;
+    width: 15rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 1rem;
+    background-color: $shadowColor;
+    box-shadow: 0 0 0 50vmax rgba($shadowColor, .2);
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    margin-top: -1rem;
+    margin-left: -2.5rem;
+    width: 5rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 3rem;
+    background-color: $linkColor;
+    z-index: 2;
+    animation: loading-slide 1s infinite ease-in-out;
+  }
+}
+
+@keyframes loading-slide {
+  0%, 100% {
+    transform: translateX(-100%);
+  }
+  50% {
+    transform: translateX(100%);
+  }
+}
+
+.current-fragment + .loading--dots {
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: rgba($shadowColor, .2);
+    z-index: 1;
+  }
+
+  &::after {
+    content: "";
+    margin-top: -1rem;
+    margin-left: -1rem;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 1rem;
+    background-color: rgba($linkColor, 0);
+    box-shadow:
+     -3rem 0 0 0 rgba($linkColor, 0),
+     3rem 0 0 0 rgba($linkColor, 0);
+    z-index: 2;
+    animation: loading-dots 2s infinite alternate ease-in-out;
+  }
+}
+
+@keyframes loading-dots {
+  0% {
+    background-color: rgba($linkColor, 0);
+    box-shadow:
+    -3rem 0 0 0 $linkColor,
+    3rem 0 0 0 rgba($linkColor, 0);
+  }
+
+  50% {
+    background-color: $linkColor;
+    box-shadow:
+     -3rem 0 0 0 rgba($linkColor, 0),
+     3rem 0 0 0 rgba($linkColor, 0);
+  }
+
+  100% {
+    background-color: rgba($linkColor, 0);
+    box-shadow:
+     -3rem 0 0 0 rgba($linkColor, 0),
+     3rem 0 0 0 $linkColor;
+  }
+}
+
+.screen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  animation: screen-vt 8s -3s infinite alternate linear;
+}
+
+.screen::after {
+  content: "Loading…";
+  padding: 1.5em 1em;
+  display: inline-block;
+  border-radius: .25rem;
+  font-weight: bold;
+  background-color: $linkColor;
+  color: $mainColor;
+  z-index: 2;
+  opacity: 1;
+  animation: screen-hz 9s -2s infinite alternate linear;
+}
+
+@keyframes screen-hz {
+  to {
+    transform: translateX(100vw) translateX(-100%);
+  }
+}
+
+@keyframes screen-vt {
+  to {
+    transform: translateY(100vh) translateY(-100%);
+  }
+}
