@@ -50,7 +50,7 @@
 <p>post hoc ergo propter hoc</p>
 </blockquote>
 </section><section data-background-video="images/baseball-1.mp4" data-background-video-loop="loop"></section><section data-background-video="images/baseball-2.mp4" data-background-video-loop="loop"></section><section><h3>Animation Tells <br> the Right Story</h3>
-<p>When we an­i­mate an in­ter­face cor­rectly,<br> we make sure users don’t make up the wrong story.</p>
+<p>When we an­i­mate an in­ter­face cor­rectly,<br> we make sure users don’t make up<br> the wrong story.</p>
 </section></section><section><section><h2>What Does Animation Communicate?</h2>
 </section><section><h3><span class="pull-double">“</span>I’m Important”</h3>
 <ul>
@@ -73,13 +73,54 @@
 <button class="submit-pulse">Success!</button>
 <span class="fragment"></span>
 <button class="submit-shake">Error!</button></p>
+</section><section><h3><span class="pull-double">“</span>Slow Down, There!”</h3>
+<ul>
+<li class="fragment">Indicate that the app or el­e­ment is busy with an async ac­tion</li>
+<li class="fragment"><span class="small-caps">CSS</span> can be keyed to <code>aria-busy=&quot;true&quot;</code></li>
+<li class="fragment">Forms, new con­tent</li>
+</ul>
+</section><section><div class="fragment"></div>
+<form class="loading loading--spin">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name">
+  </div>
+</form>
+<div class="fragment"></div>
+<form class="loading loading--slide">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name">
+  </div>
+</form>
+<div class="fragment"></div>
+<form class="loading loading--dots">
+  <div>
+    <label for="name">Name</label>
+    <input type="text" id="name">
+  </div>
+</form>
+</section><section><div class="screen" role="presentation"></div>
 </section><section><h3><span class="pull-double">“</span>We’re Connected”</h3>
-</section><section data-background-iframe="https://codepen.io/jdsteinbach/embed/uvzlx?theme-id=0&slug-hash=uvzlx&default-tab=result&user=jdsteinbach&embed-version=2&pen-title=Flexbox&name=cp_embed_1"></section><section data-background-iframe="https://codepen.io/jdsteinbach/embed/fDEgz?height=400&theme-id=0&slug-hash=fDEgz&default-tab=result&user=jdsteinbach&embed-version=2&pen-title=Form%20Flip&name=cp_embed_1"></section><section><h3><span class="pull-double">“</span>I Come From …”</h3>
+<ul>
+<li class="fragment">Use mo­tion to show the re­la­tion­ship be­tween el­e­ments.</li>
+<li class="fragment">Off-screen nav</li>
+</ul>
+</section><section data-background-iframe="https://codepen.io/jdsteinbach/embed/fDEgz?height=400&theme-id=0&slug-hash=fDEgz&default-tab=result&user=jdsteinbach&embed-version=2&pen-title=Form%20Flip&name=cp_embed_1"></section><section><h3><span class="pull-double">“</span>I Come From …”</h3>
 <ul>
 <li class="fragment">Use mo­tion to show the source of some con­tent.</li>
 <li class="fragment">Accordions, sub-menus</li>
 </ul>
-</section><section data-background-iframe="https://codepen.io/jdsteinbach/embed/ryecg?height=400&theme-id=0&slug-hash=ryecg&default-tab=result&user=jdsteinbach&embed-version=2&pen-title=Mobile%20Menu&name=cp_embed_1"></section><section data-background-iframe="https://codepen.io/jdsteinbach/embed/ytHrl?height=400&theme-id=0&slug-hash=ytHrl&default-tab=result&user=jdsteinbach&embed-version=2&pen-title=Offscreen%20Menu&name=cp_embed_1"></section><section><h3><span class="pull-double">“</span>I’m Going…”</h3>
+</section><section data-background-iframe="https://codepen.io/jdsteinbach/embed/ryecg?height=400&theme-id=0&slug-hash=ryecg&default-tab=result&user=jdsteinbach&embed-version=2&pen-title=Mobile%20Menu&name=cp_embed_1"></section><section><div class="hover-flag">
+  <div class="fragment"></div>
+  <button class="hover-flag__trigger">
+    <svg viewbox="0 0 32 32" fill="currentColor">
+      <path d="M16 0c-5.523 0-10 4.477-10 10 0 10 10 22 10 22s10-12 10-22c0-5.523-4.477-10-10-10zM16 16.125c-3.383 0-6.125-2.742-6.125-6.125s2.742-6.125 6.125-6.125 6.125 2.742 6.125 6.125-2.742 6.125-6.125 6.125zM12.125 10c0-2.14 1.735-3.875 3.875-3.875s3.875 1.735 3.875 3.875c0 2.14-1.735 3.875-3.875 3.875s-3.875-1.735-3.875-3.875z"/>
+    </svg>
+  </button>
+  <p class="hover-flag__content">Check out this awe­some lo­ca­tion!</p>
+</div>
+</section><section><h3><span class="pull-double">“</span>I’m Going To…”</h3>
 <ul>
 <li class="fragment">Use mo­tion to show the des­ti­na­tion of some con­tent.</li>
 <li class="fragment"><span class="pull-double">“</span>Add to Cart” but­ton</li>
@@ -191,7 +232,7 @@
 </section><section><h3>Ember Animation</h3>
 <ul>
   <li data-no-fragment>
-    <a rel="noreferrer noopener nofollow" target="_blank" href="https://embercamp.jds.app/">Demo: Animated To-Do List</a>
+    EmberCamp Demo: <a rel="noreferrer noopener nofollow" target="_blank" href="https://embercamp.jds.app/">App</a>, <a rel="noreferrer noopener nofollow" target="_blank" href="https://github.com/jdsteinbach/meaningful-motion-ember">Code</a>
   </li>
   <li data-no-fragment>
     <a rel="noreferrer noopener nofollow" target="_blank" href="https://ember-animation.github.io/liquid-fire/">Liquid Fire</a>
