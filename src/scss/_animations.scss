@@ -344,40 +344,6 @@ $eases: linear, ease-in, ease-out, ease-in-out;
   }
 }
 
-.screen {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  animation: screen-vt 8s -3s infinite alternate linear;
-}
-
-.screen::after {
-  content: "Loading…";
-  padding: 1.5em 1em;
-  display: inline-block;
-  border-radius: .25rem;
-  font-weight: bold;
-  background-color: $linkColor;
-  color: $mainColor;
-  z-index: 2;
-  opacity: 1;
-  animation: screen-hz 9s -2s infinite alternate linear;
-}
-
-@keyframes screen-hz {
-  to {
-    transform: translateX(100vw) translateX(-100%);
-  }
-}
-
-@keyframes screen-vt {
-  to {
-    transform: translateY(100vh) translateY(-100%);
-  }
-}
-
-
 .hover-flag {
   padding: 5em;
   display: flex;

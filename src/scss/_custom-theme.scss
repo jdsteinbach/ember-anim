@@ -332,6 +332,10 @@ body {
   }
 }
 
+iframe {
+  border-width: 0;
+}
+
 // Theme template ------------------------------
 @import "css/theme/template/theme";
 
