@@ -1,5 +1,5 @@
 {
-  "name": "activate-slides",
+  "name": "ember-anim",
   "version": "1.0.0",
   "description": "Meaningful Motion in Ember Apps (Activate Conf 2019)",
   "title": "Content Choreography",
@@ -16,7 +16,7 @@
   },
   "keywords": [
     "CSS",
-    "Grid",
+    "animation",
     "slides"
   ],
   "author": "James Steinbach",
